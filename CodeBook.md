@@ -35,7 +35,7 @@ mergeddata <- rbind(Xtrain,Xtest)
 mergedactivity <- rbind(ytrain,ytest)
 mergedsubjects <- rbind(subjecttrain,subjecttest)
 ```
-Next, only the measurements on mean and standard deviation for each feature were extracted. ++Only variable names containing "-mean()" or "-std()" were included++, since it was explicitly stated in "features_info.txt" that this represented values estimated from the signals. Other variables containing "mean" were therefore excluded. This resulted in reducing the data from 561 to 66 features (variables).
+Next, only the measurements on mean and standard deviation for each feature were extracted. **Only variable names containing "-mean()" or "-std()" were included**, since it was explicitly stated in "features_info.txt" that this represented values estimated from the signals. Other variables containing "mean" were therefore excluded. This resulted in reducing the data from 561 to 66 features (variables).
 ```
 featuresmeanstd <- grep("-mean\\(\\)|-std\\(\\)", features[, 2])
 mergeddatameanstd <- mergeddata[,featuresmeanstd]
@@ -44,7 +44,7 @@ To name the activities with descriptive activity names, the names from the file 
 ```
 mergedactivity[,1]  <- activitylabels[mergedactivity[,1],2]
 ```
-To appropriately label the data set with decriptive variable names, the naming convention in the file "features.txt" was kept and applied to the respective columns in the merged data. There has been a discussion on the Coursera forums whether this assignment includes "cleaning" the variable names further, for instance removing parentheses and changing all names to lower case. ++I decided not to do any further manipulation on the variable names++, because keeping the original names makes it easier to go back to the UCI HAR dataset and compare.
+To appropriately label the data set with decriptive variable names, the naming convention in the file "features.txt" was kept and applied to the respective columns in the merged data. There has been a discussion on the Coursera forums whether this assignment includes "cleaning" the variable names further, for instance removing parentheses and changing all names to lower case. **I decided not to do any further manipulation on the variable names**, because keeping the original names makes it easier to go back to the UCI HAR dataset and compare.
 The variable containing information on activities and subjects were labelled "activity" and subject", respectively.
 ```
 names(mergeddatameanstd) <- features[featuresmeanstd,2]
@@ -55,7 +55,7 @@ To create one final large merged dataset, the data frames for subjects, activiti
 ```
 final <- cbind(mergedsubjects,mergedactivity,mergeddatameanstd)
 ```
-To create a second, independent tidy data set with the average of each variable for each subject and each activity, I decided to use the package "dplyr", `library(dplyr)`.
+To create a second, independent tidy data set with the average of each variable for each subject and each activity, I decided to use the package "dplyr", `require(dplyr)`.
 ```
 tidy <- final %>%
         group_by(subject, activity) %>%
