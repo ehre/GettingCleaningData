@@ -84,6 +84,7 @@ A factor variable with six levels, containing descriptive names for the 6 activi
 - **Variables 3:68, features**:
 66 numeric variables, where all features are normalized and bounded within [-1,1]. As described above, each entry represents the average of multiple measurements per subject and activity. 
 The variable names, eg **tBodyAcc-mean()-X**, have the following naming convention:
+
 1. The names all start with "t" (="time domain signal") or "f" (="frequency domain signal").
 2. Then, the vector is described, for instance "BodyAcc" stands for "Body Acceleration Signal". For a full description of all abbreviations, see the file "features_info.txt" in the original UCI HAR data set.
 3. Then, information on whether the variable contains the mean value "-mean()" or the standard deviation "-std()" for the vector.
