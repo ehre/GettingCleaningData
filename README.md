@@ -2,8 +2,7 @@
 Course Project for the Coursera/Johns Hopkins University "Getting and Cleaning Data" course.
 
 ##Introduction
-In this course project, the assignment was to download [the 
-**Human Activity Recognition Using Smartphones Data Set**  from the UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), and from the raw data produce an independent, tidy data set according to the project instructions.
+In this course project, the assignment was to download a copy of [**the  Human Activity Recognition Using Smartphones Data Set**  from the UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), and from the raw data produce an independent, tidy data set according to the project instructions.
 
 ## Repository content
 1. **README.md** - this file!
@@ -27,8 +26,7 @@ The following assumptions are made:
 
  1. The script ("**run_analysis.R**") is downloaded to your working directory.
  2. The project data is downloaded from the following address https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
- 3. The data is unzipped to your working directory ("./UCI HAR
-    Dataset/").
+ 3. The data is unzipped to your working directory ("./UCI HAR Dataset/").
  4. Please note that this script depends on the package "dplyr" by Hadley Wickham. If needed, add the first line of code below in the console before sourcing the script:
 
 ```

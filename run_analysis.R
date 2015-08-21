@@ -27,7 +27,7 @@ subjecttest <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 features <- read.table("./UCI HAR Dataset/features.txt")
 activitylabels <- read.table("./UCI HAR Dataset/activity_labels.txt")
 
-## Merge test and training sets (first step with separate variables for data, activities and subjects).
+## Merge test and training sets (first step with separate data frames for data, activities and subjects).
 mergeddata <- rbind(Xtrain,Xtest)
 mergedactivity <- rbind(ytrain,ytest)
 mergedsubjects <- rbind(subjecttrain,subjecttest)
